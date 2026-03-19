@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+:root {
+    --bg-color: #050505;
+    --text-color: #ffffff;
+    --gold: #D4AF37;
+    --gold-gradient: linear-gradient(90deg, #D4AF37 0%, #F7EF8A 50%, #D4AF37 100%);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ЭФФЕКТЫ */
+.gold-gradient-text {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(212, 175, 55, 0.3) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+/* ШАПКА */
+header { padding: 30px 0; }
+.nav { display: flex; justify-content: space-between; align-items: center; }
+.nav-menu { display: flex; list-style: none; gap: 30px; }
+.nav-menu a { color: white; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6; transition: 0.3s; }
+.nav-menu a:hover { opacity: 1; color: var(--gold); }
+
+/* ГЛАВНАЯ / ТАРИФЫ */
+.hero { padding: 80px 0; text-align: center; }
+.hero h1 { font-size: 4rem; font-weight: 900; text-transform: uppercase; margin-bottom: 20px; }
+
+.glass-button {
+    display: inline-block;
+    padding: 20px 60px;
+    background: var(--gold);
+    color: #000;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.glass-button:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4); }
+
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 50px 0; }
+.price-card { background: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 35px; padding: 45px 35px; text-align: left; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.price-card:hover { transform: translateY(-15px) scale(1.03); border-color: var(--gold); box-shadow: 0 20px 50px rgba(212, 175, 55, 0.15); }
+.price-card h3 { font-size: 2rem; color: var(--gold); margin-bottom: 5px; text-transform: uppercase; font-weight: 900; }
+.price-subtext { font-size: 0.85rem; color: #666; margin-bottom: 20px; text-transform: lowercase; }
+.price-value { font-size: 2.2rem; font-weight: 900; margin-bottom: 25px; color: #fff; }
+.price-card p { font-size: 0.95rem; color: #bbb; margin-bottom: 12px; }
+
+/* ПОРТФОЛИО */
+.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 80px; }
+.step-card { background: #0d0d0d; padding: 30px; border-radius: 35px; border: 1px solid #1a1a1a; transition: 0.4s; }
+.step-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1); }
+.step-num { font-size: 2.5rem; font-weight: 900; color: var(--gold); margin-bottom: 15px; }
+.step-card h3 { margin-bottom: 10px; font-size: 1.2rem; font-weight: 900; }
+
+.portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding-bottom: 100px; }
+.work-card { text-align: center; }
+.work-img-wrap { width: 100%; height: auto; border-radius: 40px; overflow: hidden; margin-bottom: 25px; border: 1px solid #1a1a1a; transition: 0.4s ease; }
+.work-img-wrap img { width: 100%; height: auto; display: block; }
+.work-card:hover .work-img-wrap { border-color: var(--gold); box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15); }
+.work-btn { display: inline-block; padding: 14px 35px; background: transparent; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; border-radius: 50px; font-size: 0.8rem; font-weight: 700; transition: 0.3s; }
+.work-btn:hover { background: var(--gold); color: #000; transform: scale(1.05); }
+
+/* СПИСОК С ГАЛОЧКАМИ */
+.benefits-section { padding: 80px 0 120px; max-width: 850px; margin: 0 auto; }
+.
+benefit-item { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 35px; }
+.check-icon { color: var(--gold); font-size: 1.8rem; font-weight: 900; line-height: 1; }
+.benefit-item p { font-size: 1.4rem; font-weight: 700; color: #ffffff; line-height: 1.4; }
+.gold-text { color: var(--gold); }
+
+/* КОНТАКТЫ */
+.contacts-hero { padding: 80px 0; text-align: center; }
+.contacts-hero h1 { font-size: 3.2rem; font-weight: 900; line-height: 1.1; margin-bottom: 30px; text-transform: uppercase; }
+.contacts-subtitle { font-size: 1.2rem; color: #bbb; max-width: 850px; margin: 0 auto 50px; line-height: 1.6; }
+.trust-section { background: #0d0d0d; padding: 60px 40px; border-radius: 40px; border: 1px solid #1a1a1a; margin-bottom: 100px; }
+.trust-title { font-size: 1.8rem; font-weight: 900; margin-bottom: 40px; color: var(--gold); text-align: center; }
+.trust-grid { display: flex; flex-direction: column; gap: 30px; }
+.trust-item { display: flex; gap: 20px; align-items: flex-start; }
+.trust-dot { color: var(--gold); font-size: 1.2rem; line-height: 1.5; }
+.trust-item p { font-size: 1.1rem; color: #eee; line-height: 1.5; }
+.trust-item strong { color: #fff; text-transform: uppercase; font-size: 1rem; display: block; margin-bottom: 5px; }
+.trust-section:hover { border-color: var(--gold); box-shadow: 0 20px 50px rgba(212, 175, 55, 0.05); transition: 0.5s; }
+
+.footer { padding: 60px 0; text-align: center; opacity: 0.3; font-size: 0.7rem; }
+/* СТИЛИ ДЛЯ МИНИ-FAQ В КОНТАКТАХ */
+.faq-minimal {
+    padding-bottom: 60px;
+    margin-top: -40px; /* Прижимаем чуть ближе к блоку доверия */
+}
+
+.faq-item {
+    max-width: 850px;
+    margin-left: 40px; /* Смещаем левее, чтобы было вровень с текстом выше */
+}
+
+.faq-question {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #666; /* Темно-серый для вопроса */
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.faq-answer {
+    font-size: 1.1rem;
+    color: #888; /* Серый для ответа */
+    line-height: 1.5;
+}
+/* --- АДАПТАЦИЯ ПОД МОБИЛЬНЫЕ УСТРОЙСТВА --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; } /* Уменьшаем заголовок на главном */
+    .contacts-hero h1 { font-size: 1.8rem; }
+    
+    .nav { flex-direction: column; gap: 20px; text-align: center; }
+    .nav-menu { gap: 15px; }
+
+    .pricing-grid, .portfolio-grid, .steps-grid {
+        grid-template-columns: 1fr; /* Всё в одну колонку */
+        gap: 20px;
+    }
+
+    .work-img-wrap { height: auto; border-radius: 25px; }
+    .price-card, .step-card, .trust-section { padding: 25px 20px; border-radius: 25px; }
+    
+    .benefit-item p { font-size: 1.1rem; }
+    .check-icon { font-size: 1.4rem; }
+    
+    .final-text-section p { font-size: 1.2rem; }
+}
+.faq-minimal {
+    margin-top: 60px !important; /* Жестко толкаем блок вниз из-под рамки */
+    position: relative;
+    z-index: 10;
+    display: block;
+    clear: both; /* Если там были плавающие элементы, это их сбросит */
+}
+
+.faq-item {
+    padding-top: 20px;
+}
